@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 230px;
+}
+.header .middleHeader {
+  position: absolute;
+  height: 230px;
+}
+.header .middleHeader .middleHeaderForm .middleHeaderInput {
+  border: 1px gray solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 700px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-top: 100px;
+}
+.header .middleHeader .middleHeaderForm .middleHeaderButton {
+  border: none;
+  position: relative;
+  left: 660px;
+  bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  width: 50px;
+  height: 64px;
+}
+.header .middleHeader .middleHeaderForm .middleHeaderButton .middleHeaderInputImage {
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .header .middleHeader .middleHeaderForm .middleHeaderInput {
+    width: 300px;
+  }
+  .header .middleHeader .middleHeaderForm .middleHeaderButton {
+    left: 260px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,51 @@
+.writeText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.writeText .writeTextWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 742px;
+}
+.writeText .writeTextWrapper .writeTextName {
+  margin-bottom: 30px;
+  height: 30px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 8px;
+  width: 200px;
+}
+.writeText .writeTextWrapper .writeTextCaption {
+  margin-bottom: 30px;
+  height: 30px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 8px;
+}
+.writeText .writeTextWrapper .writeTextContent {
+  resize: none;
+  height: 300px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 8px;
+}
+.writeText .writeTextWrapper .writeTextButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.writeText .writeTextWrapper .writeTextButtonWrapper button {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: #ececec;
+  cursor: pointer;
+}
+.writeText .writeTextWrapper .writeTextButtonWrapper .writeTextSave {
+  background-color: #1e90ff;
+}
+
+/*# sourceMappingURL=write.css.map */

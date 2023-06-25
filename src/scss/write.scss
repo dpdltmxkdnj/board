@@ -1,0 +1,51 @@
+.writeText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+
+  .writeTextWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 742px;
+    .writeTextName {
+      margin-bottom: 30px;
+      height: 30px;
+      border: none;
+      background-color: #ececec;
+      border-radius: 8px;
+      width: 200px;
+    }
+    .writeTextCaption {
+      margin-bottom: 30px;
+      height: 30px;
+      border: none;
+      background-color: #ececec;
+      border-radius: 8px;
+    }
+    .writeTextContent {
+      resize: none;
+      height: 300px;
+      border: none;
+      background-color: #ececec;
+      border-radius: 8px;
+    }
+    .writeTextButtonWrapper {
+      display: flex;
+      justify-content: center;
+
+      button {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        background-color: #ececec;
+        cursor: pointer;
+      }
+      .writeTextSave {
+        background-color: #1e90ff;
+      }
+    }
+  }
+}

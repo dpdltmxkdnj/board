@@ -1,0 +1,73 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.main .topMain {
+  width: 742px;
+  text-align: end;
+}
+.main .topMain .write {
+  background-color: #41464e;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+.main .middleMain {
+  margin-top: 50px;
+  width: 742px;
+}
+.main .middleMain .middleMainList {
+  width: 742px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.main .middleMain .middleMainList tr {
+  display: table-row;
+}
+.main .middleMain .middleMainList tr th {
+  padding: 15px 10px;
+  background: #f9fafb;
+  border-top: 2px solid #505c78;
+  border-bottom: 1px solid #d2d7dc;
+  font-weight: 300;
+  color: #222;
+}
+.main .middleMain td {
+  padding: 15px 10px;
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid #eaecf1;
+}
+.main .middleMain td > button {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .main .topMain {
+    width: 342px;
+  }
+  .main .topMain .write {
+    width: 80px;
+  }
+  .main .middleMain {
+    width: 342px;
+  }
+  .main .middleMain .middleMainList {
+    width: 342px;
+  }
+  .main .middleMain .middleMainList tr {
+    display: table-row;
+  }
+  .main .middleMain .middleMainList tr th {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
