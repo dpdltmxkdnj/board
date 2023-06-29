@@ -1,14 +1,15 @@
-.writeText {
+.modifyText {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 200px;
 
-  .writeTextWrapper {
+  .modifyTextWrapper {
     display: flex;
     flex-direction: column;
     width: 742px;
-    .writeTextName {
+    height: 538px;
+    .modifyTextName {
       margin-bottom: 30px;
       height: 30px;
       border: none;
@@ -16,45 +17,54 @@
       border-radius: 8px;
       width: 200px;
     }
-    .writeTextCaption {
+    .modifyTextCaption {
       margin-bottom: 30px;
       height: 30px;
       border: none;
       background-color: #ececec;
       border-radius: 8px;
     }
-    .writeTextContent {
+    .modifyTextContent {
+      margin-top: 13px;
       font-size: 14px;
       resize: none;
       height: 300px;
+      padding: 0px;
       border: none;
       background-color: #ececec;
       border-radius: 8px;
     }
-    .writeTextButtonWrapper {
+    .modifyTextButtonWrapper {
       display: flex;
       justify-content: center;
 
-      button {
+      button,
+      a {
         margin: 20px;
         padding: 20px;
         border-radius: 30px;
         font-size: 16px;
-
+        text-decoration: none;
         border: none;
         color: white;
         background-color: #ececec;
         cursor: pointer;
       }
-      .writeTextSave {
+      .modifyTextSave {
         background-color: #1e90ff;
+      }
+      .modifyTextDelete {
+        background-color: #dc143c;
       }
     }
   }
 }
 @media (max-width: 768px) {
   .App {
-    .writeTextWrapper {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    .modifyTextWrapper {
       width: 342px;
     }
   }

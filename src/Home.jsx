@@ -1,20 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./css/App.css";
 import "./css/header.css";
 import "./css/main.css";
 import Main from "./home/Main";
 import Header from "./home/Header";
-
+import { textValue } from "./App";
 function Home() {
-  const [inputValue, setInputValue] = useState("");
+  const texts = useContext(textValue);
 
-  function headerInputChange(e) {
-    setInputValue(e.target.value);
+  const [mainText, setMainText] = useState(texts);
+
+  function headerInputChange(textInput) {
+    if (textInput === "") {
+      setMainText(texts);
+    } else {
+      setMainText(texts.filter((text) => text.caption === textInput));
+    }
   }
   return (
     <div className="Home">
-      <Header inputValue={inputValue} headerInputChange={headerInputChange} />
-      <Main />
+      <Header headerInputChange={headerInputChange} />
+      <Main mainText={mainText} />
     </div>
   );
 }

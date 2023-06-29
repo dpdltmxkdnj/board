@@ -1,19 +1,34 @@
 import "../css/write.css";
-import { textValue, functions } from "../App";
-import { useContext, useState } from "react";
+import { functions } from "../App";
+import { useContext, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Write() {
   const navigate = useNavigate();
 
-  const texts = useContext(textValue);
-  const writeTextSave = useContext(functions);
-  console.log(texts);
+  // const texts = useContext(textValue);
+  const { writeTextSave } = useContext(functions);
   const [individulText, setIndividulText] = useState({
     name: "",
     caption: "",
     content: "",
   });
+  const nameRef = useRef();
+  const captionRef = useRef();
+  const contentRef = useRef();
+
+  function inspect() {
+    if (nameRef.current.value === "") {
+      nameRef.current.focus();
+    } else if (captionRef.current.value === "") {
+      captionRef.current.focus();
+    } else if (contentRef.current.value === "") {
+      contentRef.current.focus();
+    } else {
+      writeTextSave(individulText);
+      navigate(-1);
+    }
+  }
 
   return (
     <div className="writeText">
@@ -25,6 +40,7 @@ export default function Write() {
           onChange={(e) => {
             setIndividulText({ ...individulText, name: e.target.value });
           }}
+          ref={nameRef}
         ></input>
         <input
           className="writeTextCaption"
@@ -33,6 +49,7 @@ export default function Write() {
           onChange={(e) => {
             setIndividulText({ ...individulText, caption: e.target.value });
           }}
+          ref={captionRef}
         ></input>
         <textarea
           className="writeTextContent"
@@ -41,15 +58,10 @@ export default function Write() {
           onChange={(e) => {
             setIndividulText({ ...individulText, content: e.target.value });
           }}
+          ref={contentRef}
         ></textarea>
         <div className="writeTextButtonWrapper">
-          <button
-            className="writeTextSave"
-            onClick={() => {
-              writeTextSave(individulText);
-              navigate(-1);
-            }}
-          >
+          <button className="writeTextSave" onClick={inspect}>
             저장하기
           </button>
           <button
@@ -58,7 +70,7 @@ export default function Write() {
               navigate(-1);
             }}
           >
-            취소하기
+            뒤로가기
           </button>
         </div>
       </div>

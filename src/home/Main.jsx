@@ -1,18 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { textValue } from "../App";
 
-export default function Main() {
+export default function Main({ mainText }) {
   const navigate = useNavigate();
-  const texts = useContext(textValue);
 
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = ("0" + (date.getMonth() + 1)).slice(-2);
-  const day = ("0" + date.getDate()).slice(-2);
-  const dateStr = `${year}-${month}-${day}`;
-  console.log(dateStr);
-  console.log(texts);
   return (
     <div className="main">
       <div className="topMain">
@@ -58,14 +48,20 @@ export default function Main() {
               <td>DD</td>
               <td>2023-06-17</td>
             </tr> */}
-            {texts.map((text) => (
+            {mainText.map((text) => (
               <tr key={text.number}>
                 <td>{text.number}</td>
                 <td>
-                  <button>{text.caption}</button>
+                  <button
+                    onClick={() => {
+                      navigate(`texts/${text.number}`);
+                    }}
+                  >
+                    {text.caption}
+                  </button>
                 </td>
                 <td>{text.name}</td>
-                <td>{text.date}</td>
+                <td>{text.date.slice(0, 10)}</td>
               </tr>
             ))}
           </tbody>

@@ -1,29 +1,36 @@
-.writeText {
+.eachText {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 200px;
 
-  .writeTextWrapper {
+  .eachTextWrapper {
     display: flex;
     flex-direction: column;
     width: 742px;
-    .writeTextName {
+    .eachTextName {
+      font-size: 16px;
       margin-bottom: 30px;
       height: 30px;
       border: none;
-      background-color: #ececec;
-      border-radius: 8px;
+      border-bottom: 1px solid #505c78;
       width: 200px;
+      background-color: white;
     }
-    .writeTextCaption {
-      margin-bottom: 30px;
+
+    .eachTextCaption {
+      font-size: 16px;
+      margin-bottom: 10px;
       height: 30px;
       border: none;
-      background-color: #ececec;
-      border-radius: 8px;
+      border-bottom: 1px solid #505c78;
+      background-color: white;
     }
-    .writeTextContent {
+    .eachTextDate {
+      align-self: flex-end;
+      margin-bottom: 10px;
+    }
+    .eachTextContent {
       font-size: 14px;
       resize: none;
       height: 300px;
@@ -31,22 +38,22 @@
       background-color: #ececec;
       border-radius: 8px;
     }
-    .writeTextButtonWrapper {
+    .eachTextButtonWrapper {
       display: flex;
       justify-content: center;
 
-      button {
+      a {
         margin: 20px;
         padding: 20px;
         border-radius: 30px;
-        font-size: 16px;
-
         border: none;
         color: white;
         background-color: #ececec;
         cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
       }
-      .writeTextSave {
+      .eachTextSave {
         background-color: #1e90ff;
       }
     }
@@ -54,8 +61,14 @@
 }
 @media (max-width: 768px) {
   .App {
-    .writeTextWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .eachText {
       width: 342px;
+      .eachTextWrapper {
+        width: 342px;
+      }
     }
   }
 }

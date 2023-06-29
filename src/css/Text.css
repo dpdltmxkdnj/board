@@ -1,0 +1,74 @@
+.eachText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.eachText .eachTextWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 742px;
+}
+.eachText .eachTextWrapper .eachTextName {
+  font-size: 16px;
+  margin-bottom: 30px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #505c78;
+  width: 200px;
+  background-color: white;
+}
+.eachText .eachTextWrapper .eachTextCaption {
+  font-size: 16px;
+  margin-bottom: 10px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #505c78;
+  background-color: white;
+}
+.eachText .eachTextWrapper .eachTextDate {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.eachText .eachTextWrapper .eachTextContent {
+  font-size: 14px;
+  resize: none;
+  height: 300px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 8px;
+}
+.eachText .eachTextWrapper .eachTextButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.eachText .eachTextWrapper .eachTextButtonWrapper a {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: #ececec;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+.eachText .eachTextWrapper .eachTextButtonWrapper .eachTextSave {
+  background-color: #1e90ff;
+}
+
+@media (max-width: 768px) {
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .App .eachText {
+    width: 342px;
+  }
+  .App .eachText .eachTextWrapper {
+    width: 342px;
+  }
+}
+
+/*# sourceMappingURL=Text.css.map */
