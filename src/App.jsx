@@ -13,24 +13,29 @@ import { createContext } from "react";
 export const textValue = createContext([]);
 export const functions = createContext(null);
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "write",
+      element: <Write />,
+    },
+    {
+      path: "texts/:text",
+      element: <Text />,
+    },
+    {
+      path: "modifys/:modify",
+      element: <Modify />,
+    },
+  ],
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "write",
-    element: <Write />,
-  },
-  {
-    path: "texts/:text",
-    element: <Text />,
-  },
-  {
-    path: "modifys/:modify",
-    element: <Modify />,
-  },
-]);
+    basename: `${process.env.PUBLIC_URL}`,
+  }
+);
 
 function App() {
   const json = JSON.parse(localStorage.getItem("value"));
